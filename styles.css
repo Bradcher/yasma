@@ -1,0 +1,477 @@
+/* GENERAL */
+body { font-family: 'Inter', sans-serif; margin: 0; }
+
+/* NAVBAR */
+.navbar {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Logo tweaks */
+.navbar .logo {
+  height: 130px; /* slightly bigger than before */
+  transition: height 0.3s;
+}
+
+/* Brand text tweaks */
+.navbar .navbar-brand span {
+  font-size: 1.4rem; /* slightly larger */
+}
+
+/* Nav links tweaks */
+.navbar-nav .nav-link {
+  font-size: 1.15rem; /* slightly larger */
+  font-weight: 600;
+}
+
+/* SPLIT HERO SECTION */
+.hero-left {
+  background: #0c1c2c; /* Deep navy – adjust if needed */
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.hero-carousel-img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Mobile stacking adjustments */
+@media (max-width: 768px) {
+  .hero-left {
+    min-height: auto;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-carousel-img {
+    height: 50vh;
+  }
+
+  .navbar .logo {
+    height: 110px; /* smaller on mobile */
+  }
+  .navbar .navbar-brand span {
+    font-size: 1.25rem;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+/* CTA SECTION */
+.cta-section {
+  background: url('images/cta.jpg') center/cover no-repeat;
+  height: 40vh;
+  min-height: 280px;
+}
+
+/* GALLERY */
+.gallery-card img {
+  height: 230px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.9rem;
+}
+
+/* ===== UPDATED SERVICES HIGHLIGHT — BIGGER + CLEANER ===== */
+.services-highlight {
+  background-color: #0a1f44; /* strong navy */
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: white;
+}
+
+.services-highlight p {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.services-highlight .btn-lg {
+  padding: 1rem 2.2rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+  .services-highlight {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .services-highlight p {
+    font-size: 1.35rem;
+    line-height: 1.5;
+  }
+
+  .services-highlight .btn-lg {
+    padding: 0.85rem 1.8rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* VIDEO DIVIDER */
+.video-divider {
+  position: relative;
+  height: 15vh;
+  overflow: hidden;
+}
+
+.video-divider video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  padding: 0 20px;
+}
+
+/* GOOGLE REVIEWS (original) */
+.google-reviews h2 {
+  font-size: 2.2rem;
+}
+
+.review-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.review-box:hover {
+  transform: translateY(-5px);
+}
+
+.review-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* CONTACT FORM SECTION */
+.contact-form-section {
+  background: #f7faff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.contact-form-section h2 {
+  color: #0c1c2c;
+  font-size: 2.3rem;
+}
+
+.form-wrapper {
+  max-width: 750px;
+  height: 700px;
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    height: 800px;
+  }
+}
+
+/* ================================
+   FOOTER — MATCHES CURRENT THEME
+================================ */
+footer.footer {
+  background: #0c1c2c;
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 0.95rem;
+}
+
+footer.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+footer.footer a:hover {
+  opacity: 0.7;
+}
+
+footer .instagram-btn {
+  background: #ffffff;
+  color: #0c1c2c;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+footer .instagram-btn:hover {
+  opacity: 0.85;
+}
+
+footer.footer .medium {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+footer.footer h5 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer.footer ul li {
+  margin-bottom: 0.35rem;
+}
+
+footer.footer .text-dark {
+  color: #d3d3d3 !important;
+}
+
+footer.footer .text-dark a {
+  color: #e5e5e5 !important;
+}
+
+footer.footer hr {
+  border-color: rgba(255,255,255,0.25);
+}
+
+footer.footer .copy {
+  color: #dcdcdc;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  footer.footer {
+    text-align: center;
+  }
+  footer.footer img {
+    max-width: 130px;
+  }
+  footer.footer ul {
+    margin-top: 1rem;
+  }
+}
+
+/* CONTACT SPLIT SECTION */
+.contact-split-section {
+  background: #f7faff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contact-info-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info-box h3 {
+  color: #0c1c2c;
+  font-size: 1.7rem;
+}
+
+.contact-phone {
+  color: #0c1c2c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-phone:hover {
+  opacity: 0.7;
+}
+
+.map-box iframe {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.contact-split-section .form-wrapper {
+  max-width: 100%;
+  height: 700px;
+}
+
+@media (max-width: 768px) {
+  .contact-split-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .contact-split-section .form-wrapper {
+    height: 800px;
+  }
+
+  .contact-info-box {
+    text-align: center;
+  }
+}
+
+.phone-line {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #0c1c2c;
+}
+
+.phone-line i {
+  font-size: 1.1rem;
+  margin-right: 8px;
+  color: #0c1c2c;
+}
+
+.contact-main-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+/* ==========================================
+   NEW — GOOGLE REVIEWS (NAVY THEME UPDATE)
+========================================== */
+.google-reviews {
+  background-color: #001f3f; /* navy */
+  color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.google-reviews h2 {
+  color: white;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.google-reviews .review-box img {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid white;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button white w/ navy text */
+.review-btn {
+  background-color: white !important;
+  color: #001f3f !important;
+  border: 2px solid white !important;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.review-btn:hover {
+  background-color: transparent !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+/* SERVICES SECTION STYLING — FULL WIDTH */
+.service-section {
+  padding: 5rem 0;
+}
+
+.service-section:nth-child(odd) {
+  background-color: #0c1c2c; /* navy background */
+  color: #ffffff; /* text white for readability */
+}
+
+.service-section:nth-child(even) {
+  background-color: #f7faff; /* very light background */
+  color: #0c1c2c; /* navy text for readability */
+}
+
+.service-section h2 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.service-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: inherit; /* ensures text color matches parent */
+}
+
+.service-section ul {
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+}
+
+.service-section ul li {
+  margin-bottom: 0.5rem;
+  color: inherit; /* bullets follow parent color */
+}
+
+.service-section img {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border-radius: 8px;
+}
+
+/* Align bullets properly on mobile */
+@media (max-width: 767px) {
+  .service-section .service-list {
+    padding-left: 1.5rem; /* moves bullets closer to text */
+    text-align: left;      /* ensures text aligns with bullet */
+  }
+}
+
+/* MOBILE: spacing and alignment under images */
+@media (max-width: 767px) {
+  .service-section .col-md-6:last-child {
+    margin-top: 1rem;        /* space between image and text */
+    text-align: left;         /* aligns text nicely under image */
+  }
+
+  .service-section .service-list {
+    padding-left: 1.5rem;     /* keeps bullets aligned with text */
+  }
+}
+
+/* MOBILE: spacing under images and text alignment */
+@media (max-width: 767px) {
+  .about-section-final .col-md-6:last-child {
+    margin-top: 1rem;       /* space between image and text */
+    text-align: left;        /* left-align text for readability */
+  }
+}
+
+/* --- About Page Gap Fix --- */
+
+/* Make sure the last section before footer has no bottom margin/padding */
+.about-section-final {
+  background-color: #0c1c2c;  /* match footer color */
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove extra top margin from footer */
+footer.footer {
+  margin-top: 0 !important;
+}
+
+/* Optional: fix any row spacing issues inside the last section */
+.about-section-final .row {
+  margin-bottom: 0;
+}
