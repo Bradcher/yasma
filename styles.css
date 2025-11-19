@@ -475,3 +475,33 @@ footer.footer {
 .about-section-final .row {
   margin-bottom: 0;
 }
+
+.btn-estimate {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #0c1c2c;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-estimate:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* Reverse-color version for the Pergola section */
+.btn-estimate-dark {
+  background-color: #0c1c2c;   /* navy */
+  color: #ffffff;              /* white text */
+  border-color: #0c1c2c;
+}
+
+.btn-estimate-dark:hover {
+  background-color: transparent;
+  color: #0c1c2c;
+  border-color: #ffffff;
+}
