@@ -476,6 +476,11 @@ footer.footer {
   margin-bottom: 0;
 }
 
+/* ==============================
+   BUTTONS — MATCH MOBILE LOOK
+============================== */
+
+/* Light button (Pool Cages & Screening) */
 .btn-estimate {
   display: inline-block;
   background-color: #ffffff;
@@ -489,19 +494,28 @@ footer.footer {
 }
 
 .btn-estimate:hover {
-  background-color: transparent;
-  color: #ffffff;
-}
-
-/* Reverse-color version for the Pergola section */
-.btn-estimate-dark {
-  background-color: #0c1c2c;   /* navy */
-  color: #ffffff;              /* white text */
-  border-color: #0c1c2c;
-}
-
-.btn-estimate-dark:hover {
-  background-color: transparent;
+  background-color: #ffffff; /* keep solid on hover */
   color: #0c1c2c;
   border-color: #ffffff;
 }
+
+/* Dark button (Pergolas) */
+.btn-estimate-dark {
+  display: inline-block;
+  background-color: #0c1c2c;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #0c1c2c;
+  transition: all 0.3s ease;
+}
+
+.btn-estimate-dark:hover {
+  background-color: #0c1c2c; /* stays solid */
+  color: #ffffff;
+  border-color: #0c1c2c;
+}
+
+
