@@ -539,3 +539,23 @@ footer.footer .copy {
     display: block;
   }
 }
+
+/* WHY CHOOSE US NAVY BACKGROUND */
+.about-section-final {
+  background-color: #0c1c2c; /* Navy background */
+}
+
+/* Why Choose Us section flush with footer */
+.about-section-final {
+  padding-bottom: 0 !important; /* remove section bottom padding */
+  background-color: #0c1c2c !important; /* ensure navy background */
+}
+
+.about-section-final .container {
+  padding-bottom: 0 !important; /* remove container padding if any */
+}
+
+footer.footer {
+  margin-top: 0 !important; /* remove any top margin on footer */
+}
+
