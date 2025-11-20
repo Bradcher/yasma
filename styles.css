@@ -7,26 +7,23 @@ body { font-family: 'Inter', sans-serif; margin: 0; }
   padding-bottom: 1.5rem;
 }
 
-/* Logo tweaks */
 .navbar .logo {
-  height: 130px; /* slightly bigger than before */
+  height: 130px;
   transition: height 0.3s;
 }
 
-/* Brand text tweaks */
 .navbar .navbar-brand span {
-  font-size: 1.4rem; /* slightly larger */
+  font-size: 1.4rem;
 }
 
-/* Nav links tweaks */
 .navbar-nav .nav-link {
-  font-size: 1.15rem; /* slightly larger */
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
 /* SPLIT HERO SECTION */
 .hero-left {
-  background: #0c1c2c; /* Deep navy – adjust if needed */
+  background: #0c1c2c;
   color: white;
   min-height: 80vh;
   display: flex;
@@ -41,19 +38,16 @@ body { font-family: 'Inter', sans-serif; margin: 0; }
   object-fit: cover;
 }
 
-/* Mobile stacking adjustments */
 @media (max-width: 768px) {
   .hero-left {
     min-height: auto;
     padding: 2.5rem 1.5rem;
   }
-
   .hero-carousel-img {
     height: 50vh;
   }
-
   .navbar .logo {
-    height: 110px; /* smaller on mobile */
+    height: 110px;
   }
   .navbar .navbar-brand span {
     font-size: 1.25rem;
@@ -82,9 +76,9 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===== UPDATED SERVICES HIGHLIGHT — BIGGER + CLEANER ===== */
+/* SERVICES HIGHLIGHT */
 .services-highlight {
-  background-color: #0a1f44; /* strong navy */
+  background-color: #0a1f44;
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
@@ -105,18 +99,15 @@ footer {
   border-radius: 10px;
 }
 
-/* MOBILE VERSION */
 @media (max-width: 768px) {
   .services-highlight {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-
   .services-highlight p {
     font-size: 1.35rem;
     line-height: 1.5;
   }
-
   .services-highlight .btn-lg {
     padding: 0.85rem 1.8rem;
     font-size: 1.1rem;
@@ -149,29 +140,7 @@ footer {
   padding: 0 20px;
 }
 
-/* GOOGLE REVIEWS (original) */
-.google-reviews h2 {
-  font-size: 2.2rem;
-}
-
-.review-box {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.review-box:hover {
-  transform: translateY(-5px);
-}
-
-.review-box img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* CONTACT FORM SECTION */
+/* CONTACT FORM */
 .contact-form-section {
   background: #f7faff;
   padding-top: 4rem;
@@ -194,9 +163,7 @@ footer {
   }
 }
 
-/* ================================
-   FOOTER — MATCHES CURRENT THEME
-================================ */
+/* FOOTER STYLING */
 footer.footer {
   background: #0c1c2c;
   color: white;
@@ -272,7 +239,7 @@ footer.footer .copy {
   }
 }
 
-/* CONTACT SPLIT SECTION */
+/* CONTACT SPLIT */
 .contact-split-section {
   background: #f7faff;
   padding-top: 5rem;
@@ -310,68 +277,68 @@ footer.footer .copy {
   height: 700px;
 }
 
-@media (max-width: 768px) {
-  .contact-split-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .contact-split-section .form-wrapper {
-    height: 800px;
-  }
-
-  .contact-info-box {
-    text-align: center;
-  }
-}
-
-.phone-line {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #0c1c2c;
-}
-
-.phone-line i {
-  font-size: 1.1rem;
-  margin-right: 8px;
-  color: #0c1c2c;
-}
-
+/* RESTORED CONTACT HEADER (YOUR MISSING STYLE) */
 .contact-main-header {
   text-align: center;
-  font-size: 2.5rem;
+  color: #0c1c2c;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 40px;
   margin-top: 60px;
+  margin-bottom: 25px;
 }
 
-/* ==========================================
-   NEW — GOOGLE REVIEWS (NAVY THEME UPDATE)
-========================================== */
+/* === GOOGLE REVIEWS === */
+
 .google-reviews {
-  background-color: #001f3f; /* navy */
+  background-color: #001f3f;
   color: white;
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
 .google-reviews h2 {
-  color: white;
   font-size: 2.3rem;
   margin-bottom: 40px;
   font-weight: 700;
+  color: white;
 }
 
-.google-reviews .review-box img {
+/* DESKTOP 2×2 GRID — EXPANDED FOR MAX IMAGE SIZE */
+.desktop-reviews {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  max-width: 1400px; /* <<< expanded so images get bigger */
+  margin: 0 auto 40px auto;
+}
+
+.review-box {
+  background: transparent;
+  padding: 0;
+}
+
+.desktop-reviews .review-box img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 12px;
   border: 3px solid white;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
 }
 
-/* Button white w/ navy text */
+/* MOBILE STACKED */
+.mobile-reviews {
+  display: none;
+}
+
+.mobile-review-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  border: 2px solid white;
+  display: block;
+}
+
+/* REVIEW BUTTON */
 .review-btn {
   background-color: white !important;
   color: #001f3f !important;
@@ -388,134 +355,110 @@ footer.footer .copy {
   border-color: white !important;
 }
 
-/* SERVICES SECTION STYLING — FULL WIDTH */
-.service-section {
-  padding: 5rem 0;
-}
-
-.service-section:nth-child(odd) {
-  background-color: #0c1c2c; /* navy background */
-  color: #ffffff; /* text white for readability */
-}
-
-.service-section:nth-child(even) {
-  background-color: #f7faff; /* very light background */
-  color: #0c1c2c; /* navy text for readability */
-}
-
-.service-section h2 {
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.service-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: inherit; /* ensures text color matches parent */
-}
-
-.service-section ul {
-  padding-left: 1.25rem;
-  margin-top: 1rem;
-}
-
-.service-section ul li {
-  margin-bottom: 0.5rem;
-  color: inherit; /* bullets follow parent color */
-}
-
-.service-section img {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-  border-radius: 8px;
-}
-
-/* Align bullets properly on mobile */
-@media (max-width: 767px) {
-  .service-section .service-list {
-    padding-left: 1.5rem; /* moves bullets closer to text */
-    text-align: left;      /* ensures text aligns with bullet */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .desktop-reviews {
+    display: none;
+  }
+  .mobile-reviews {
+    display: block;
   }
 }
 
-/* MOBILE: spacing and alignment under images */
-@media (max-width: 767px) {
-  .service-section .col-md-6:last-child {
-    margin-top: 1rem;        /* space between image and text */
-    text-align: left;         /* aligns text nicely under image */
+/* VIDEO DIVIDER */
+.video-divider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.video-divider video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-divider {
+    display: none;
   }
+}
 
-  .service-section .service-list {
-    padding-left: 1.5rem;     /* keeps bullets aligned with text */
+@media (min-width: 769px) {
+  .video-divider video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: contrast(1.05) brightness(1.05) saturate(1.1) sharpen(1);
+    transform: scale(1.01);
   }
 }
 
-/* MOBILE: spacing under images and text alignment */
-@media (max-width: 767px) {
-  .about-section-final .col-md-6:last-child {
-    margin-top: 1rem;       /* space between image and text */
-    text-align: left;        /* left-align text for readability */
-  }
-}
+/* === NEW BUTTON & IMAGE SPACING STYLES FOR SERVICES === */
 
-/* --- About Page Gap Fix --- */
-
-/* Make sure the last section before footer has no bottom margin/padding */
-.about-section-final {
-  background-color: #0c1c2c;  /* match footer color */
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Remove extra top margin from footer */
-footer.footer {
-  margin-top: 0 !important;
-}
-
-/* Optional: fix any row spacing issues inside the last section */
-.about-section-final .row {
-  margin-bottom: 0;
-}
-
-/* ==============================
-   BUTTONS — MATCH MOBILE LOOK
-============================== */
-
-/* Light button (Pool Cages & Screening) */
-.btn-estimate {
-  display: inline-block;
+/* Navy & Light Sections Buttons */
+.navy-section .btn-estimate {
   background-color: #ffffff;
   color: #0c1c2c;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
+}
+
+.navy-section .btn-estimate:hover {
+  background-color: transparent;
+  color: #ffffff;
   border: 2px solid #ffffff;
-  transition: all 0.3s ease;
 }
 
-.btn-estimate:hover {
-  background-color: #ffffff; /* keep solid on hover */
-  color: #0c1c2c;
-  border-color: #ffffff;
-}
-
-/* Dark button (Pergolas) */
-.btn-estimate-dark {
-  display: inline-block;
+.light-section .btn-estimate-dark {
   background-color: #0c1c2c;
   color: #ffffff;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 2px solid #0c1c2c;
-  transition: all 0.3s ease;
 }
 
-.btn-estimate-dark:hover {
-  background-color: #0c1c2c; /* stays solid */
-  color: #ffffff;
+.light-section .btn-estimate-dark:hover {
+  background-color: transparent;
+  color: #0c1c2c;
+  border: 2px solid #0c1c2c;
+}
+
+/* Mobile spacing between image and text */
+@media (max-width: 767px) {
+  .service-section .col-md-6 {
+    margin-bottom: 20px;
+  }
+
+  .service-section img {
+    margin-bottom: 15px;
+  }
+}
+
+/* SERVICES BUTTONS: reverse color based on section background */
+.service-section {
+  position: relative;
+}
+
+.service-section .btn-estimate,
+.service-section .btn-estimate-dark {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+/* Navy section: white button, navy text */
+.service-section[style*="background-color:#0c1c2c"] .btn-estimate,
+.service-section[style*="background-color:#0c1c2c"] .btn-estimate-dark {
+  background-color: white;
+  color: #0c1c2c;
+  border-color: white;
+}
+
+/* Light section: navy button, white text */
+.service-section[style*="background-color:#f7faff"] .btn-estimate,
+.service-section[style*="background-color:#f7faff"] .btn-estimate-dark {
+  background-color: #0c1c2c;
+  color: white;
   border-color: #0c1c2c;
 }
-
-
