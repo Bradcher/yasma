@@ -1,0 +1,8 @@
+# robots.txt for The Yasma Screen
+# https://www.theyasmascreen.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.theyasmascreen.com/sitemap.xml
