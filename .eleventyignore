@@ -8,6 +8,9 @@ gallery.html
 privacy-policy.html
 terms-of-service.html
 
+# CMS admin — copied verbatim via addPassthroughCopy
+admin
+
 # Build utilities — not website content
 optimize-gallery.js
 node_modules

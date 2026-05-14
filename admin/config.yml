@@ -1,0 +1,86 @@
+backend:
+  name: github
+  repo: Bradcher/yasma
+  branch: blog
+
+site_url: https://www.theyasmascreen.com
+
+media_folder: img/blog
+public_folder: /img/blog
+
+collections:
+  - name: posts
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: posts
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/blog/{{slug}}/"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        required: true
+
+      - label: Publish Date
+        name: date
+        widget: datetime
+        required: true
+        hint: >
+          Set today's date to publish immediately. Set a future date to schedule —
+          the post will go live automatically once that date passes and the site rebuilds (happens daily at 7 AM ET).
+
+      - label: Featured Image
+        name: featured_image
+        widget: image
+        required: true
+        hint: "Recommended: JPG, PNG, or WebP, at least 1200px wide."
+
+      - label: Excerpt
+        name: excerpt
+        widget: text
+        required: true
+        hint: "A 1–2 sentence summary shown on the blog listing page and in search results."
+
+      - label: Meta Title
+        name: meta_title
+        widget: string
+        required: false
+        hint: "Custom title for search engines. Leave blank to use the post title."
+
+      - label: Meta Description
+        name: meta_description
+        widget: string
+        required: false
+        hint: "Custom description for search engines. 150–160 characters recommended. Leave blank to use the excerpt."
+
+      - label: Categories
+        name: categories
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - Pool Cages
+          - Pergolas
+          - Lanais
+          - Screens
+          - Maintenance
+          - Tips
+          - News
+
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+        hint: "Freeform keywords — type one and press Enter to add it."
+
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: true
+        hint: "When ON, this post is hidden from the live site. Turn OFF to publish."
+
+      - label: Body
+        name: body
+        widget: markdown
+        required: true
