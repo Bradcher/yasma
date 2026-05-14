@@ -1,0 +1,17 @@
+name: Daily Rebuild for Scheduled Posts
+
+on:
+  schedule:
+    # 7 AM EST (12:00 UTC) / 8 AM EDT — runs every day
+    # GitHub Actions cron does not adjust for daylight saving time,
+    # so this lands at 7 AM in winter and 8 AM in summer. Both are fine.
+    - cron: "0 12 * * *"
+  # Allows you to trigger a rebuild manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  trigger-netlify-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build hook
+        run: curl -s -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"
