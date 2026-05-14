@@ -1,0 +1,56 @@
+---
+layout: base.njk
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - posts
+    - allCategories
+permalink: "/blog/tag/{{ tag | slugify }}/"
+---
+
+{% set taggedPosts = collections[tag] | livePosts | reverse %}
+
+<header class="py-5" style="background-color: #0c1c2c; color: white; text-align: center;">
+  <div class="container">
+    <p class="text-uppercase mb-2" style="opacity:0.65; letter-spacing:1px; font-size:0.85rem;">Tag</p>
+    <h1 class="fw-bold mb-2">#{{ tag }}</h1>
+    <p class="lead mb-0">{{ taggedPosts.length }} post{{ 's' if taggedPosts.length != 1 }}</p>
+  </div>
+</header>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    {% if taggedPosts.length %}
+    <div class="row g-4">
+      {% for post in taggedPosts %}
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ post.url }}" class="blog-card d-flex flex-column text-decoration-none h-100">
+          {% if post.data.featured_image %}
+          <img src="{{ post.data.featured_image }}" alt="{{ post.data.title }}" class="blog-card-img" />
+          {% else %}
+          <div class="blog-card-img blog-card-img--placeholder"></div>
+          {% endif %}
+          <div class="blog-card-body flex-grow-1 d-flex flex-column">
+            {% if post.data.categories and post.data.categories.length %}
+            <span class="category-pill mb-2 d-inline-block">{{ post.data.categories[0] }}</span>
+            {% endif %}
+            <h2 class="blog-card-title">{{ post.data.title }}</h2>
+            <p class="blog-card-excerpt">{{ post.data.excerpt }}</p>
+            <p class="blog-card-date mt-auto mb-0">{{ post.date | dateDisplay }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-center text-muted py-5">No posts found for this tag.</p>
+    {% endif %}
+    <div class="text-center mt-5">
+      <a href="/blog/" class="btn btn-outline-secondary">&larr; All Posts</a>
+    </div>
+  </div>
+</section>

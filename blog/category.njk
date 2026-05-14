@@ -1,0 +1,43 @@
+---
+layout: base.njk
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.allCategories
+  size: 1
+  alias: category
+permalink: "/blog/category/{{ category.name | slugify }}/"
+---
+
+<header class="py-5" style="background-color: #0c1c2c; color: white; text-align: center;">
+  <div class="container">
+    <p class="text-uppercase mb-2" style="opacity:0.65; letter-spacing:1px; font-size:0.85rem;">Category</p>
+    <h1 class="fw-bold mb-2">{{ category.name }}</h1>
+    <p class="lead mb-0">{{ category.posts.length }} post{{ 's' if category.posts.length != 1 }}</p>
+  </div>
+</header>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      {% for post in category.posts %}
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ post.url }}" class="blog-card d-flex flex-column text-decoration-none h-100">
+          {% if post.data.featured_image %}
+          <img src="{{ post.data.featured_image }}" alt="{{ post.data.title }}" class="blog-card-img" />
+          {% else %}
+          <div class="blog-card-img blog-card-img--placeholder"></div>
+          {% endif %}
+          <div class="blog-card-body flex-grow-1 d-flex flex-column">
+            <h2 class="blog-card-title">{{ post.data.title }}</h2>
+            <p class="blog-card-excerpt">{{ post.data.excerpt }}</p>
+            <p class="blog-card-date mt-auto mb-0">{{ post.date | dateDisplay }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-5">
+      <a href="/blog/" class="btn btn-outline-secondary">&larr; All Posts</a>
+    </div>
+  </div>
+</section>

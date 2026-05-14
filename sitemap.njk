@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.theyasmascreen.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.theyasmascreen.com/services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.theyasmascreen.com/gallery.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.theyasmascreen.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.theyasmascreen.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  {% for post in collections.posts %}
+  <url>
+    <loc>https://www.theyasmascreen.com{{ post.url }}</loc>
+    <lastmod>{{ post.date | dateISO }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endfor %}
+  {% for cat in collections.allCategories %}
+  <url><loc>https://www.theyasmascreen.com/blog/category/{{ cat.name | slugify }}/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  {% endfor %}
+</urlset>

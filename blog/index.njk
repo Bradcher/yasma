@@ -1,0 +1,78 @@
+---
+layout: base.njk
+title: Blog
+meta_title: "Blog | The Yasma Screen — Florida Pool Cages & Screening"
+meta_description: "Tips, guides, and news about pool cages, screen enclosures, pergolas, and outdoor living in Florida from The Yasma Screen."
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.posts
+  size: 12
+  alias: paginatedPosts
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<header class="py-5" style="background-color: #0c1c2c; color: white; text-align: center;">
+  <div class="container">
+    <h1 class="fw-bold mb-3">The Yasma Screen Blog</h1>
+    <p class="lead mb-0">Tips, guides, and news about screening, pool cages, and outdoor living in Florida.</p>
+  </div>
+</header>
+
+<section class="py-5 bg-light">
+  <div class="container">
+
+    {% if paginatedPosts.length %}
+    <div class="row g-4">
+      {% for post in paginatedPosts %}
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ post.url }}" class="blog-card d-flex flex-column text-decoration-none h-100">
+          {% if post.data.featured_image %}
+          <img src="{{ post.data.featured_image }}" alt="{{ post.data.title }}" class="blog-card-img" />
+          {% else %}
+          <div class="blog-card-img blog-card-img--placeholder"></div>
+          {% endif %}
+          <div class="blog-card-body flex-grow-1 d-flex flex-column">
+            {% if post.data.categories and post.data.categories.length %}
+            <div class="mb-2">
+              {% for cat in post.data.categories | limit(2) %}
+              <span class="category-pill me-1">{{ cat }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <h2 class="blog-card-title">{{ post.data.title }}</h2>
+            <p class="blog-card-excerpt">{{ post.data.excerpt }}</p>
+            <p class="blog-card-date mt-auto mb-0">{{ post.date | dateDisplay }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if pagination.pages.length > 1 %}
+    <nav class="mt-5" aria-label="Blog pagination">
+      <ul class="pagination justify-content-center">
+        {% if pagination.href.previous %}
+        <li class="page-item">
+          <a class="page-link" href="{{ pagination.href.previous }}">&laquo; Previous</a>
+        </li>
+        {% endif %}
+        {% for pageUrl in pagination.hrefs %}
+        <li class="page-item{% if pageUrl == page.url %} active{% endif %}">
+          <a class="page-link" href="{{ pageUrl }}">{{ loop.index }}</a>
+        </li>
+        {% endfor %}
+        {% if pagination.href.next %}
+        <li class="page-item">
+          <a class="page-link" href="{{ pagination.href.next }}">Next &raquo;</a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+    {% endif %}
+
+    {% else %}
+    <p class="text-center text-muted py-5">No posts yet — check back soon!</p>
+    {% endif %}
+
+  </div>
+</section>

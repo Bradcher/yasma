@@ -1,0 +1,24 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Yasma Screen Blog</title>
+    <link>https://www.theyasmascreen.com</link>
+    <atom:link href="https://www.theyasmascreen.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Tips, guides, and news about pool cages, screen enclosures, and outdoor structures in Florida.</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ collections.posts[0].date | dateRFC822 if collections.posts.length else "" }}</lastBuildDate>
+    {% for post in collections.posts | limit(20) %}
+    <item>
+      <title>{{ post.data.title | escape }}</title>
+      <link>https://www.theyasmascreen.com{{ post.url }}</link>
+      <guid isPermaLink="true">https://www.theyasmascreen.com{{ post.url }}</guid>
+      <pubDate>{{ post.date | dateRFC822 }}</pubDate>
+      <description>{{ post.data.excerpt | escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
