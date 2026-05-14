@@ -1,0 +1,14 @@
+# Existing HTML pages are handled by addPassthroughCopy in eleventy.config.js.
+# Excluding them here prevents Eleventy from also outputting them to
+# _site/[name]/index.html, which would break the .html nav links.
+index.html
+about.html
+services.html
+gallery.html
+privacy-policy.html
+terms-of-service.html
+
+# Build utilities — not website content
+optimize-gallery.js
+node_modules
+_site
