@@ -1,5 +1,7 @@
 /* GENERAL */
-body { font-family: 'Inter', sans-serif; margin: 0; }
+html { overflow-x: hidden; }
+body { font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
 
 /* NAVBAR */
 .navbar {
@@ -462,6 +464,38 @@ footer.footer .copy {
   color: white;
   border-color: #0c1c2c;
 }
+/* Phone call buttons — outline style, adapts to section background */
+.btn-phone {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  background-color: transparent;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.service-section[style*="background-color:#0c1c2c"] .btn-phone {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.service-section[style*="background-color:#0c1c2c"] .btn-phone:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.service-section[style*="background-color:#f7faff"] .btn-phone {
+  color: #0c1c2c;
+  border-color: rgba(12, 28, 44, 0.4);
+}
+
+.service-section[style*="background-color:#f7faff"] .btn-phone:hover {
+  border-color: #0c1c2c;
+  background-color: rgba(12, 28, 44, 0.05);
+}
+
 /* === GOOGLE REVIEWS SECTION RESTORE === */
 .google-reviews {
   background-color: #001f3f;
@@ -557,5 +591,12 @@ footer.footer .copy {
 
 footer.footer {
   margin-top: 0 !important; /* remove any top margin on footer */
+}
+
+/* Constrain portrait phone photos to match the ~1:1 aspect ratio of the other service images */
+.service-img-portrait {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Project Gallery — Pool Cages, Pergolas & Screening in Florida | The Yasma Screen</title>
+    <meta name="description" content="Browse The Yasma Screen's project gallery — custom pool cages, pergolas, screen enclosures, hurricane screens & paver installations across Southwest Florida. Free estimates!" />
+    <link rel="canonical" href="https://www.theyasmascreen.com/gallery" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <meta name="geo.region" content="US-FL" />
+    <meta name="geo.placename" content="Cape Coral, Florida" />
+    <meta name="geo.position" content="26.6265;-81.9601" />
+    <meta name="ICBM" content="26.6265, -81.9601" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Yasma Screen" />
+    <meta property="og:title" content="Project Gallery | The Yasma Screen — Florida Pool Cages & Screening" />
+    <meta property="og:description" content="Browse completed pool cage, pergola, screen enclosure and hurricane screen projects across Southwest Florida." />
+    <meta property="og:url" content="https://www.theyasmascreen.com/gallery" />
+    <meta property="og:image" content="https://www.theyasmascreen.com/img/e99eb1c9-b51c-48f1-a82a-5ae756fe1060.JPG" />
+    <meta property="og:image:width" content="1320" />
+    <meta property="og:image:height" content="1822" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Project Gallery | The Yasma Screen — Florida Pool Cages & Screening" />
+    <meta name="twitter:description" content="Browse completed pool cage, pergola, and screen enclosure projects across Southwest Florida." />
+    <meta name="twitter:image" content="https://www.theyasmascreen.com/img/e99eb1c9-b51c-48f1-a82a-5ae756fe1060.JPG" />
+
+    <meta name="theme-color" content="#0c1c2c" />
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* ── FILTER BAR ── */
+      .filter-bar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.93);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 0.65rem 0;
+      }
+      .filter-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding-bottom: 2px;
+      }
+      .filter-chip {
+        flex-shrink: 0;
+        border: 2px solid #0c1c2c;
+        background: transparent;
+        color: #0c1c2c;
+        border-radius: 50px;
+        padding: 0.35rem 1rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s;
+        white-space: nowrap;
+        line-height: 1.4;
+      }
+      .filter-chip:hover { background: rgba(12, 28, 44, 0.08); }
+      .filter-chip.active { background: #0c1c2c; color: #fff; }
+
+      /* ── MASONRY ── */
+      .masonry {
+        column-count: 3;
+        column-gap: 0.85rem;
+      }
+      @media (max-width: 991px) { .masonry { column-count: 2; } }
+      @media (max-width: 767px)  { .masonry { column-count: 1; } }
+
+      /* ── GALLERY TILE ── */
+      .gallery-tile {
+        break-inside: avoid;
+        margin-bottom: 0.85rem;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        display: block;
+        transition: box-shadow 0.25s;
+      }
+      .gallery-tile:hover {
+        box-shadow: 0 8px 28px rgba(12, 28, 44, 0.22);
+      }
+      .gallery-tile img.gallery-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        image-orientation: from-image;
+        transition: transform 0.3s ease;
+      }
+      .gallery-tile:hover img.gallery-img {
+        transform: scale(1.03);
+      }
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(12, 28, 44, 0.84));
+        color: #fff;
+        padding: 2.5rem 0.85rem 0.75rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+      .gallery-tile:hover .gallery-caption { transform: translateY(0); }
+      .caption-label {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        padding: 0.1rem 0.4rem;
+        margin-bottom: 0.3rem;
+      }
+      .tile-hidden { display: none; }
+      @media (hover: none) {
+        .gallery-caption { transform: translateY(0); }
+      }
+
+      /* ── BEFORE / AFTER TILE ── */
+      .ba-tile { cursor: pointer; }
+      .ba-tile:hover img.gallery-img { transform: none; } /* suppress zoom on BA tiles */
+      .ba-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      .ba-before {
+        width: 100%;
+        height: auto;
+        display: block;
+        image-orientation: from-image;
+        transition: opacity 0.45s ease;
+      }
+      .ba-after {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        image-orientation: from-image;
+        opacity: 0;
+        transition: opacity 0.45s ease;
+      }
+      .ba-tile.flipped .ba-before { opacity: 0; }
+      .ba-tile.flipped .ba-after  { opacity: 1; }
+      .ba-badge {
+        position: absolute;
+        top: 0.55rem;
+        left: 0.55rem;
+        background: rgba(12, 28, 44, 0.82);
+        color: #fff;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 0.22rem 0.6rem;
+        border-radius: 4px;
+        z-index: 3;
+        pointer-events: none;
+      }
+      .ba-hint {
+        position: absolute;
+        bottom: 0.55rem;
+        right: 0.55rem;
+        background: rgba(12, 28, 44, 0.72);
+        color: #fff;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 0.2rem 0.55rem;
+        border-radius: 4px;
+        z-index: 3;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+      .ba-tile.flipped .ba-hint { opacity: 0; }
+
+      /* ── LIGHTBOX ── */
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(12, 28, 44, 0.96);
+        z-index: 9000;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+      }
+      .lightbox.open { display: flex; }
+      .lightbox-img-wrap {
+        max-width: min(90vw, 1100px);
+        max-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #lbImg {
+        max-width: 100%;
+        width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 6px;
+        image-orientation: from-image;
+      }
+      #lbCaption {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+        text-align: center;
+        max-width: 700px;
+        padding: 0 1rem;
+      }
+      .lb-btn {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.12);
+        border: none;
+        color: #fff;
+        font-size: 1.4rem;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, transform 0.2s;
+        z-index: 9001;
+      }
+      .lb-btn:hover { background: rgba(255, 255, 255, 0.25); }
+      #lbClose { top: 1rem; right: 1rem; font-size: 1.5rem; }
+      #lbClose:hover { transform: rotate(90deg); }
+      #lbPrev { left: 1rem; top: 50%; transform: translateY(-50%); }
+      #lbNext { right: 1rem; top: 50%; transform: translateY(-50%); }
+      #lbPrev:hover { transform: translateY(-50%) translateX(-3px); }
+      #lbNext:hover { transform: translateY(-50%) translateX(3px); }
+      @media (max-width: 575px) { #lbPrev, #lbNext { display: none; } }
+
+      /* ── ROTATED TILES (landscape images stored sideways) ── */
+      .gallery-tile.needs-rotate {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 133.33%; /* portrait container: height = 4/3 of width */
+      }
+      .gallery-tile.needs-rotate .gallery-img {
+        position: absolute;
+        width: 133.33%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        image-orientation: none;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      .gallery-tile.needs-rotate:hover .gallery-img {
+        transform: translate(-50%, -50%) rotate(90deg) scale(1.03);
+      }
+      .gallery-tile.needs-rotate .gallery-caption {
+        z-index: 2;
+      }
+
+      /* ── CTA ── */
+      .gallery-cta {
+        background-color: #0c1c2c;
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      /* ── MOBILE OVERFLOW GUARD ── */
+      @media (max-width: 575px) {
+        .masonry { padding: 0; }
+        .gallery-section-wrap { padding-left: 0.65rem; padding-right: 0.65rem; }
+        #lbClose { top: 0.5rem; right: 0.5rem; }
+        .gallery-cta .d-flex { flex-direction: column; align-items: center; }
+        .gallery-cta .d-flex a { width: 100%; max-width: 320px; text-align: center; }
+      }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "The Yasma Screen Project Gallery",
+      "description": "Photos of completed pool cage, pergola, screen enclosure, and paver installation projects by The Yasma Screen across Southwest Florida.",
+      "url": "https://www.theyasmascreen.com/gallery",
+      "provider": { "@id": "https://www.theyasmascreen.com/#business" }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theyasmascreen.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.theyasmascreen.com/gallery" }
+      ]
+    }
+    </script>
+  </head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logo.JPEG" alt="The Yasma Screen logo — pool cages, pergolas and screening in Florida" class="logo me-2" />
+      <span class="fw-bold">The Yasma Screen</span>
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html" aria-current="page">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<header class="py-5" style="background-color:#0c1c2c; color:white;">
+  <div class="container text-center">
+    <h1 class="fw-bold">Our Work</h1>
+    <p class="lead">Custom pool cages, pergolas, screen enclosures &amp; more across Southwest Florida</p>
+  </div>
+</header>
+
+<hr style="border:0; height:2px; background-color:#ffffff; margin:0;" />
+
+<!-- FILTER BAR -->
+<div class="filter-bar" aria-label="Filter gallery by category">
+  <div class="container">
+    <div class="filter-chips">
+      <button class="filter-chip active" data-filter="all">All Work</button>
+      <button class="filter-chip" data-filter="pool-cages">Pool Cages</button>
+      <button class="filter-chip" data-filter="pergolas">Pergolas</button>
+      <button class="filter-chip" data-filter="screens">Screens &amp; Rescreening</button>
+      <button class="filter-chip" data-filter="pavers">Paver Installation</button>
+      <button class="filter-chip" data-filter="mailboxes">Mailboxes</button>
+      <button class="filter-chip" data-filter="before-after">Before &amp; After</button>
+      <button class="filter-chip" data-filter="team">Our Team</button>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY GRID -->
+<section class="py-4 gallery-section-wrap" style="background:#f7faff;" aria-label="Project photo gallery">
+  <div class="container">
+    <div class="masonry" id="galleryGrid">
+
+      <!-- ── POOL CAGES ── -->
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/12209c73-276e-4acc-ac0a-6c317c41b5ac.webp"
+             class="gallery-img"
+             alt="Aerial view of custom aluminum pool cage installed on Florida home, Southwest Florida"
+             width="4024" height="3016"
+             loading="eager" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Aerial view — custom pool cage, Southwest Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/pooolcage.webp"
+             class="gallery-img"
+             alt="Brand new aluminum pool cage enclosing rectangular pool and spa with travertine paver deck in Florida"
+             width="5120" height="3414"
+             loading="eager" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          New pool cage with travertine paver deck, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/71c86dd7-e76f-4b9f-9d34-fab91e02d678.webp"
+             class="gallery-img"
+             alt="Interior view looking up at custom aluminum pool cage frame with pool, lounge chairs and umbrellas below, Florida"
+             width="3024" height="4032"
+             loading="eager" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Inside a custom pool cage — Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/786d43d8-a294-43c2-abf4-179a4f043f23.webp"
+             class="gallery-img"
+             alt="Custom pool cage enclosing pool and spa under blue Florida sky"
+             width="1200" height="1600"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Pool cage with spa, Southwest Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/PHOTO-2025-10-22-21-25-50-7.webp"
+             class="gallery-img"
+             alt="New aluminum pool cage with travertine paver deck enclosing pool and spa in Southwest Florida"
+             width="1200" height="1600"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          New cage, paver deck, pool &amp; spa — Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/PHOTO-2025-10-22-21-25-50-8.webp"
+             class="gallery-img"
+             alt="Pool and hot tub inside new aluminum pool cage with travertine paver surround, Southwest Florida"
+             width="1600" height="1200"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Pool cage with spa and travertine pavers, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/ed9500f3-64f0-406f-b445-ff45c7233bec.webp"
+             class="gallery-img"
+             alt="Aluminum pool cage enclosing pool and spa with travertine paver deck in Cape Coral, Florida"
+             width="1200" height="1600"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Pool cage with spa &amp; travertine deck, Cape Coral
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/f24d7334-a767-49ab-a882-668199e9c9f9.webp"
+             class="gallery-img"
+             alt="Wide aluminum pool cage enclosing pool and spa with paver surround in Southwest Florida"
+             width="1600" height="1200"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Wide pool cage with spa and paver surround
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/cagepic.webp"
+             class="gallery-img"
+             alt="Exterior of screened pool cage enclosure on Florida home with palm tree, Cape Coral"
+             width="4032" height="3024"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Screen enclosure exterior, Cape Coral Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/hero1.webp"
+             class="gallery-img"
+             alt="Custom aluminum pool cage with fountain and waterfront view in Southwest Florida"
+             width="1200" height="1600"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Pool cage with fountain &amp; waterfront view
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/hero2.webp"
+             class="gallery-img"
+             alt="Pool cage enclosure with lounge chairs and palm trees, Southwest Florida"
+             width="1600" height="1200"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Pool cage with seating area &amp; palms, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/hero3.webp"
+             class="gallery-img"
+             alt="Pool cage enclosure with colorful pool floats and tropical backyard, Florida"
+             width="1200" height="1600"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Pool cage with tropical backyard, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/cage.webp"
+             class="gallery-img"
+             alt="Screened pool cage enclosure on waterfront Florida home"
+             width="865" height="826"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Waterfront pool cage, Southwest Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pool-cages">
+        <img src="img/optimized/cage1.webp"
+             class="gallery-img"
+             alt="Custom pool cage with lounge chairs and umbrellas on Florida pool deck"
+             width="1103" height="1011"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pool Cages</div>
+          Pool cage with lounge chairs, Florida
+        </div>
+      </div>
+
+      <!-- ── TEAM ── -->
+      <div class="gallery-tile needs-rotate" data-category="team">
+        <img src="img/optimized/guysworking.webp"
+             class="gallery-img"
+             alt="The Yasma Screen crew installing a custom pool cage in Southwest Florida"
+             width="4032" height="3024"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Our Team</div>
+          The Yasma Screen crew at work
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="team">
+        <img src="img/optimized/about1.webp"
+             class="gallery-img"
+             alt="Yasma Screen team member rescreening a pool enclosure in Southwest Florida"
+             width="1200" height="1600"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Our Team</div>
+          Rescreening in action, Southwest Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="team">
+        <img src="img/optimized/truckphoto.webp"
+             class="gallery-img"
+             alt="The Yasma Screen company truck, Southwest Florida"
+             width="4032" height="3024"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Our Team</div>
+          The Yasma Screen, Southwest Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="team">
+        <img src="img/optimized/about2.webp"
+             class="gallery-img"
+             alt="Yasma Screen crew member inside pool cage wearing The Yasma Screen shirt, Southwest Florida"
+             width="1200" height="1600"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Our Team</div>
+          Yasma Screen crew on the job
+        </div>
+      </div>
+
+      <!-- ── PERGOLAS ── -->
+
+      <div class="gallery-tile" data-category="pergolas">
+        <img src="img/optimized/lanairockingchair.webp"
+             class="gallery-img"
+             alt="Custom white aluminum pergola with two hanging egg chairs, palm trees and waterfront view in Southwest Florida"
+             width="1080" height="1506"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pergolas</div>
+          Custom aluminum pergola with hanging chairs, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="pergolas">
+        <img src="img/optimized/perg.webp"
+             class="gallery-img"
+             alt="Modern aluminum pergola with built-in outdoor kitchen and bar seating in Southwest Florida"
+             width="868" height="839"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Pergolas</div>
+          Pergola with outdoor kitchen &amp; bar, Florida
+        </div>
+      </div>
+
+      <!-- ── SCREENS & RESCREENING ── -->
+
+      <div class="gallery-tile" data-category="screens">
+        <img src="img/optimized/new1.webp"
+             class="gallery-img"
+             alt="Motorized blinds and hurricane shutters installed by The Yasma Screen, Southwest Florida"
+             width="2016" height="1512"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Motorized blinds &amp; hurricane shutters, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="screens">
+        <img src="img/optimized/new2.webp"
+             class="gallery-img"
+             alt="Motorized blinds and hurricane shutters installed by The Yasma Screen, Southwest Florida"
+             width="2560" height="1205"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Motorized blinds &amp; hurricane shutters, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="screens">
+        <img src="img/optimized/new3.webp"
+             class="gallery-img"
+             alt="Motorized blinds and hurricane shutters installed by The Yasma Screen, Southwest Florida"
+             width="1920" height="2560"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Motorized blinds &amp; hurricane shutters, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="screens">
+        <img src="img/optimized/new4.webp"
+             class="gallery-img"
+             alt="Motorized blinds and hurricane shutters installed by The Yasma Screen, Southwest Florida"
+             width="2016" height="1512"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Motorized blinds &amp; hurricane shutters, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="screens">
+        <img src="img/optimized/new5.webp"
+             class="gallery-img"
+             alt="Motorized blinds and hurricane shutters installed by The Yasma Screen, Southwest Florida"
+             width="1707" height="2560"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Motorized blinds &amp; hurricane shutters, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile needs-rotate" data-category="screens">
+        <img src="img/optimized/lanaihurricneshutter1.webp"
+             class="gallery-img"
+             alt="Roll-down hurricane screens installed in a Florida pool enclosure for storm protection"
+             width="4032" height="3024"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Roll-down hurricane screens, Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile needs-rotate" data-category="screens">
+        <img src="img/optimized/lanaihurricneshutter2.webp"
+             class="gallery-img"
+             alt="Hurricane screens fully deployed for storm protection in Florida pool enclosure"
+             width="4032" height="3024"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Hurricane screens deployed, Southwest Florida
+        </div>
+      </div>
+
+      <div class="gallery-tile" data-category="screens">
+        <img src="img/optimized/screen.webp"
+             class="gallery-img"
+             alt="Decorative aluminum entry screen door installed on Florida home"
+             width="850" height="841"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Screens &amp; Rescreening</div>
+          Decorative entry screen door, Florida
+        </div>
+      </div>
+
+      <!-- ── PAVER INSTALLATION ── -->
+
+      <div class="gallery-tile" data-category="pavers">
+        <img src="img/optimized/pavers.webp"
+             class="gallery-img"
+             alt="Travertine paver pool deck with covered patio, white columns and pool in Florida"
+             width="3024" height="2888"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Paver Installation</div>
+          Travertine paver pool deck, Florida
+        </div>
+      </div>
+
+      <!-- ── MAILBOXES ── -->
+
+      <div class="gallery-tile" data-category="mailboxes">
+        <img src="img/optimized/PHOTO-2026-03-18-13-08-33.webp"
+             class="gallery-img"
+             alt="Custom modern mailbox installation with address numbers in Cape Coral, Florida"
+             width="1080" height="1383"
+             loading="lazy" />
+        <div class="gallery-caption">
+          <div class="caption-label">Mailboxes</div>
+          Custom modern mailbox, Cape Coral Florida
+        </div>
+      </div>
+
+      <!-- ── BEFORE & AFTER ── -->
+
+      <!-- Pair B: before2 / after2 — new cage + pavers -->
+      <div class="gallery-tile ba-tile" data-category="before-after">
+        <div class="ba-wrapper">
+          <img src="img/optimized/before2.webp"
+               class="gallery-img ba-before"
+               alt="Before — pool and spa with open backyard before pool cage installation in Florida"
+               width="1600" height="1200" loading="lazy" />
+          <img src="img/optimized/after2.webp"
+               class="gallery-img ba-after"
+               alt="After — same pool and spa now enclosed in custom aluminum pool cage with travertine paver deck, Florida"
+               width="1600" height="1200" />
+          <div class="ba-badge">Before</div>
+          <div class="ba-hint">Tap to reveal after &rarr;</div>
+        </div>
+      </div>
+
+      <!-- Pair C: before3 / after3 — new cage on elevated pool -->
+      <div class="gallery-tile ba-tile" data-category="before-after">
+        <div class="ba-wrapper">
+          <img src="img/optimized/before3.webp"
+               class="gallery-img ba-before"
+               alt="Before — elevated pool with teal tile surround before pool cage installation in Southwest Florida"
+               width="1600" height="1200" loading="lazy" />
+          <img src="img/optimized/after3.webp"
+               class="gallery-img ba-after"
+               alt="After — same elevated pool now enclosed in custom aluminum pool cage, Southwest Florida"
+               width="1600" height="1200" />
+          <div class="ba-badge">Before</div>
+          <div class="ba-hint">Tap to reveal after &rarr;</div>
+        </div>
+      </div>
+
+      <!-- Pair D: before / after — large cage + paver build -->
+      <div class="gallery-tile ba-tile" data-category="before-after">
+        <div class="ba-wrapper">
+          <img src="img/optimized/before.webp"
+               class="gallery-img ba-before"
+               alt="Before — freshly laid paver deck with pool cage aluminum materials staged for installation, Florida"
+               width="4032" height="3024" loading="lazy" />
+          <img src="img/optimized/after.webp"
+               class="gallery-img ba-after"
+               alt="After — completed large custom pool cage interior with patio furniture and umbrellas, Florida"
+               width="1200" height="1600" />
+          <div class="ba-badge">Before</div>
+          <div class="ba-hint">Tap to reveal after &rarr;</div>
+        </div>
+      </div>
+
+      <!-- Pair A: before1 / after1 — rescreening -->
+      <div class="gallery-tile ba-tile" data-category="before-after">
+        <div class="ba-wrapper">
+          <img src="img/optimized/before1.webp"
+               class="gallery-img ba-before"
+               alt="Before — aging pool deck and pool enclosure before full rescreening in Florida"
+               width="4032" height="3024" loading="lazy" />
+          <img src="img/optimized/after1.webp"
+               class="gallery-img ba-after"
+               alt="After — same pool fully rescreened with fresh aluminum screen panels and new pool cage, Florida"
+               width="4032" height="3024" />
+          <div class="ba-badge">Before</div>
+          <div class="ba-hint">Tap to reveal after &rarr;</div>
+        </div>
+      </div>
+
+      <!-- Pair E: IMG_1153 / IMG_1154 — cage added to two-story home -->
+      <div class="gallery-tile ba-tile" data-category="before-after">
+        <div class="ba-wrapper">
+          <img src="img/optimized/IMG_1153.webp"
+               class="gallery-img ba-before"
+               alt="Before — two-story Florida home with pool before custom pool cage installation"
+               width="4032" height="3024" loading="lazy" />
+          <img src="img/optimized/IMG_1154.webp"
+               class="gallery-img ba-after"
+               alt="After — same two-story Florida home with custom aluminum pool cage now installed"
+               width="4032" height="3024" />
+          <div class="ba-badge">Before</div>
+          <div class="ba-hint">Tap to reveal after &rarr;</div>
+        </div>
+      </div>
+
+      <!-- Pair F: IMG_1158 / e99eb1c9 — luxury waterfront screen enclosure -->
+      <div class="gallery-tile ba-tile" data-category="before-after">
+        <div class="ba-wrapper">
+          <img src="img/optimized/IMG_1158.webp"
+               class="gallery-img ba-before"
+               alt="Before — large waterfront Florida home during screen enclosure installation, ladders and crew visible"
+               width="3024" height="4032" loading="lazy" />
+          <img src="img/optimized/e99eb1c9-b51c-48f1-a82a-5ae756fe1060.webp"
+               class="gallery-img ba-after"
+               alt="After — same luxury waterfront home with stunning completed screen enclosure and pond reflection, Southwest Florida"
+               width="1320" height="1822" />
+          <div class="ba-badge">Before</div>
+          <div class="ba-hint">Tap to reveal after &rarr;</div>
+        </div>
+      </div>
+
+    </div><!-- /.masonry -->
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="gallery-cta" aria-label="Get a free estimate">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Ready to Transform Your Outdoor Space?</h2>
+    <p class="lead mb-4">Get a free estimate from Florida's trusted pool cage and screening specialists.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="index.html#contact"
+         class="btn btn-estimate"
+         style="background:#fff;color:#0c1c2c;border:2px solid #fff;padding:0.75rem 1.5rem;font-weight:600;border-radius:6px;text-decoration:none;">
+        Get a Free Estimate
+      </a>
+      <a href="tel:4804140970"
+         class="btn btn-phone"
+         style="color:#fff;border:2px solid rgba(255,255,255,0.6);padding:0.75rem 1.5rem;font-weight:600;border-radius:6px;text-decoration:none;background:transparent;">
+        <i class="fa-solid fa-phone me-2"></i>480-414-0970
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer text-white py-5 mt-0" style="background-color:#0c1c2c;">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      <div class="col-md-6 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+        <img src="./img/logo.JPEG" alt="The Yasma Screen logo" style="max-width: 150px;" width="150" height="150" class="mb-3" />
+        <a href="https://www.instagram.com/the_yasma_screen/" target="_blank" rel="noopener noreferrer"
+           class="btn instagram-btn px-3 py-1 d-inline-flex align-items-center"
+           style="color: #0c1c2c !important; background: #fff !important; font-weight: 600; text-decoration: none;">
+          <i class="fab fa-instagram me-2"></i> Follow on Instagram
+        </a>
+        <a href="https://www.facebook.com/p/The-Yasma-Screen-61577878375670/" target="_blank" rel="noopener noreferrer"
+           class="btn instagram-btn px-3 py-1 d-inline-flex align-items-center mt-2"
+           style="color: #0c1c2c !important; background: #fff !important; font-weight: 600; text-decoration: none;">
+          <i class="fab fa-facebook-f me-2"></i> Follow on Facebook
+        </a>
+        <div class="mt-3" style="text-align:center;">
+          <div style="display:flex; align-items:center; gap:6px; font-weight:600; color:white; margin-bottom:4px;">
+            <i class="fas fa-phone"></i>
+            <a href="tel:4804140970" style="color:white; text-decoration:none;">480-414-0970</a>
+          </div>
+          <div style="display:flex; align-items:center; gap:6px; font-weight:600; color:white;">
+            <i class="fas fa-phone"></i>
+            <a href="tel:7377083179" style="color:white; text-decoration:none;">737-708-3179</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h5>Business Hours</h5>
+        <ul class="list-unstyled small mb-0">
+          <li><strong>Mon</strong>: 9:00 AM – 5:00 PM</li>
+          <li><strong>Tue</strong>: 9:00 AM – 5:00 PM</li>
+          <li><strong>Wed</strong>: 9:00 AM – 5:00 PM</li>
+          <li><strong>Thu</strong>: 9:00 AM – 5:00 PM</li>
+          <li><strong>Fri</strong>: 9:00 AM – 5:00 PM</li>
+          <li><strong>Sat</strong>: 9:00 AM – 5:00 PM</li>
+          <li><strong>Sun</strong>: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4" />
+    <p class="copy text-center small mb-0">&copy; 2025 The Yasma Screen. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-btn" id="lbClose" aria-label="Close">&#x2715;</button>
+  <button class="lb-btn" id="lbPrev" aria-label="Previous image">&#8592;</button>
+  <button class="lb-btn" id="lbNext" aria-label="Next image">&#8594;</button>
+  <div class="lightbox-img-wrap">
+    <img id="lbImg" src="" alt="" />
+  </div>
+  <p id="lbCaption"></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ── FILTER ── */
+  const chips = document.querySelectorAll('.filter-chip');
+  const tiles = document.querySelectorAll('.gallery-tile');
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      tiles.forEach(t => {
+        t.classList.toggle('tile-hidden', f !== 'all' && t.dataset.category !== f);
+      });
+    });
+  });
+
+  /* ── BEFORE / AFTER TOGGLE ── */
+  document.querySelectorAll('.ba-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      tile.classList.toggle('flipped');
+      tile.querySelector('.ba-badge').textContent =
+        tile.classList.contains('flipped') ? 'After' : 'Before';
+    });
+  });
+
+  /* ── LIGHTBOX (non-BA tiles only) ── */
+  const lb      = document.getElementById('lightbox');
+  const lbImg   = document.getElementById('lbImg');
+  const lbCap   = document.getElementById('lbCaption');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev  = document.getElementById('lbPrev');
+  const lbNext  = document.getElementById('lbNext');
+
+  let current = 0;
+  let pool = [];
+
+  function buildPool() {
+    return [...document.querySelectorAll('.gallery-tile:not(.tile-hidden):not(.ba-tile)')];
+  }
+
+  function openLb(tile) {
+    pool = buildPool();
+    current = pool.indexOf(tile);
+    showLb();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLb() {
+    const img = pool[current].querySelector('img.gallery-img');
+    lbImg.src  = img.src;
+    lbImg.alt  = img.alt;
+    lbCap.textContent = img.alt;
+    lbPrev.style.display = pool.length > 1 ? '' : 'none';
+    lbNext.style.display = pool.length > 1 ? '' : 'none';
+  }
+
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  function prevLb() { current = (current - 1 + pool.length) % pool.length; showLb(); }
+  function nextLb() { current = (current + 1) % pool.length; showLb(); }
+
+  document.querySelectorAll('.gallery-tile:not(.ba-tile)').forEach(tile => {
+    tile.addEventListener('click', () => openLb(tile));
+  });
+
+  lbClose.addEventListener('click', closeLb);
+  lbPrev.addEventListener('click', prevLb);
+  lbNext.addEventListener('click', nextLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLb();
+    if (e.key === 'ArrowLeft')  prevLb();
+    if (e.key === 'ArrowRight') nextLb();
+  });
+
+  /* Swipe support */
+  let swipeX = 0;
+  lb.addEventListener('touchstart', e => { swipeX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend',   e => {
+    const dx = e.changedTouches[0].clientX - swipeX;
+    if (Math.abs(dx) > 50) { dx < 0 ? nextLb() : prevLb(); }
+  });
+
+})();
+</script>
+</body>
+</html>
