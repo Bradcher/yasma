@@ -1,7 +1,7 @@
 ---
 title: "Why Aluminum Pool Cages Are Built for Florida Weather"
 date: 2026-05-04
-featured_image: /img/aluminum-pool-cage.JPG
+featured_image: https://www.theyasmascreen.com/img/optimized/12209c73-276e-4acc-ac0a-6c317c41b5ac.webp
 excerpt: "From hurricane winds to relentless humidity, Florida punishes outdoor structures. Here's why aluminum pool cages remain the gold standard for Sunshine State homeowners and what to look for in a quality build."
 meta_title: "Why Aluminum Pool Cages Are Built for Florida Weather | The Yasma Screen"
 meta_description: "Discover why aluminum pool cages are the best choice for Florida homes. Learn about durability, hurricane resistance, and what makes a quality cage from SWFL's screening experts."
