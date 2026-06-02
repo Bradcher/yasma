@@ -133,6 +133,4 @@ We work with homeowners on any permit requirements and can provide project plans
 
 ## Ready to Upgrade Your Outdoor Surfaces?
 
-If you are planning a pool deck, driveway, patio, walkway, or full outdoor living redesign anywhere in Cape Coral, Fort Myers, Naples, or across Southwest Florida, The Yasma Screen is ready to design and install a paver surface that fits your property, matches your style, and lasts for decades.
-
-**[Contact us today for a free paver installation consultation.](https://www.theyasmascreen.com/contact)**
+The Yasma Screen designs and installs modern, durable paver surfaces for pool decks, driveways, patios, and lanais across Cape Coral, Fort Myers, Naples, and all of Southwest Florida. [Request your free estimate today](https://www.theyasmascreen.com/#contact).
